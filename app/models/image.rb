@@ -28,7 +28,6 @@ class Image < Hash
     def add_urls(page)
       doc = Nokogiri::HTML(page)
       image_sources = doc.css('img')
-
       image_sources.each do |image|
         self['url'] << image['src']
       end

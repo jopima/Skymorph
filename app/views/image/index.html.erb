@@ -1,1 +1,16 @@
+<script type="text/javascript" src="assets/jquery-1.7.1.js"></script>
 <h1>Here is my template</h1>
+<div id='ImageContainer'></div>
+<script type="text/javascript">
+imageMap = {}
+imageMap.ServiceURL = "/api/image/";
+
+ $.ajax({
+                url: 'imageMap.ServiceURL',
+                data: { position: '161.265, -59.685',survey : ['Fermi 3','INT GAL 35-80 Flux'] },
+                type: "GET"
+            }).then(function (data) {             
+             console.log(data);
+
+            })
+</script>
